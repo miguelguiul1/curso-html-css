@@ -1,0 +1,20 @@
+h1, h2 {
+    text-align: center;
+}
+.cont {
+    display: flex;
+    justify-content: space-between;
+}
+.p1{
+    background-color: blue;
+}
+.p2{
+    background-color: rgb(9, 255, 0);
+}
+.p3{
+    background-color: rgb(255, 0, 179);
+}
+
+.p1, .p2, .p3 {
+    padding: 60px;
+}

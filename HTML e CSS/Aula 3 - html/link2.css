@@ -1,0 +1,23 @@
+h1{
+    color: aqua;
+    width: 16%;
+    background-color: black;
+    border-radius: 30px;
+    
+}
+.f2{
+    color: rgb(111, 230, 0);
+    background-color: rgb(37, 14, 138);
+    
+    font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+a, .f1{
+    color: rgb(0, 174, 255);
+    background-color: rgb(153, 69, 69);
+    border-radius: 10px;
+    font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

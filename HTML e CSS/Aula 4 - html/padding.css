@@ -1,0 +1,27 @@
+div{
+    color: rgb(255, 0, 234);
+    background-color: black;
+    margin-left: 550px;
+    height: 100px;
+    width: 200px;
+    padding-left: 50px;
+    padding-top: 50px;
+    
+}
+
+.topzera{
+    color: chartreuse;
+    background-color: blueviolet;
+    margin-left: 550px;
+    height: 100px;
+    width: 200px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.input{
+    color: darkred;
+    background-color: aqua;
+    height: 250px;
+    width: 250px;
+}

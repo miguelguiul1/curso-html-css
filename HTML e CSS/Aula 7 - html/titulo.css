@@ -1,0 +1,26 @@
+.titulo1 {
+    text-align: center;        /* coloca o título no centro */
+    color: #2ecc71;            /* cor do texto */
+    background-color: darkgreen; /* cor de fundo */
+    border: 3px solid rgb(0, 0, 0); /* borda preta */
+    border-radius: 15px;       /* deixa as bordas arredondadas */
+    padding: 10px;             /* espaço dentro da caixa */
+}
+
+.titulo2 {
+    text-align: center;        /* centraliza o título */
+    color: black;              /* cor do texto */
+    background: gold;          /* fundo dourado */
+    border: 3px solid rgb(0, 0, 0); /* borda preta */
+    border-radius: 15px;       /* borda arredondada */
+    padding: 10px;             /* espaço interno */
+}
+
+.titulo3{
+    color: #FFD700;            /* cor dourada do texto */
+    background-color: #006400; /* fundo verde escuro */
+    border: 3px solid black;   /* borda preta */
+    border-radius: 15px;       /* borda arredondada */
+    text-align: center;        /* centraliza o título */
+    padding: 10px;             /* espaço dentro da caixa */
+}

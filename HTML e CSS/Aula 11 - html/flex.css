@@ -1,0 +1,29 @@
+.mãe {
+    background-color: rgb(0, 0, 0);
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div{
+    display: flex;
+    color: aliceblue;
+    width: 100px;
+    height: 100px;
+}
+.um{
+    align-self: flex-end;
+    background-color: rgb(38, 0, 255);
+    box-shadow: 10px 10px 20px rgb(196, 7, 139);
+}
+.dois{
+    align-self: flex-start;
+    background-color: rgb(6, 180, 0);
+    box-shadow: 10px 10px 20px rgb(78, 160, 255);
+}
+.tres{
+    align-self: center;
+    background-color: brown;
+    
+    box-shadow: 10px 10px 20px gold;
+}

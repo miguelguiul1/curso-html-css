@@ -1,0 +1,13 @@
+.cont2 {
+    display: flex;
+    justify-content: space-between;
+}
+.b1{
+    background-color: rgb(81, 255, 0);
+}
+.b2{
+    background-color: rgba(255, 0, 179, 0.795);
+}
+.b1, .b2 {
+    padding: 60px;
+}

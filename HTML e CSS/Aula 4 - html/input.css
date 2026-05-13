@@ -1,0 +1,11 @@
+form{
+    background-color: rgb(3, 16, 197);
+    color: rgb(25, 216, 41);
+    height: 200px;
+    width: 200px;
+    padding: 50px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    margin-left: 500px;
+    font-size: 17px;
+}

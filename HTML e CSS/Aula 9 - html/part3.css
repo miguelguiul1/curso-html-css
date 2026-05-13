@@ -1,0 +1,39 @@
+.cont3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    width: 100%;
+    gap: 30px;
+}
+
+.c, .d, .e, .f, .g, .h, .i, .j, .k {
+    width: 30%;   
+    height: 100px;
+}
+.c{
+    background-color: aqua;
+}
+.d{
+    background-color: rgb(223, 18, 178);
+}
+.e{
+    background-color: rgb(57, 13, 214);
+}
+.f{
+    background-color: rgb(240, 23, 23);
+}
+.g{
+    background-color: rgb(57, 243, 0);
+}
+.h{
+    background-color: rgb(66, 9, 57);
+}
+.i{
+    background-color: rgb(218, 33, 208);
+}
+.j{
+    background-color: rgb(167, 82, 56);
+}
+.k{
+    background-color: rgb(119, 18, 18);
+}

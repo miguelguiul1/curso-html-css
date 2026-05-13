@@ -1,0 +1,14 @@
+
+.cont2{
+    display: flex;
+    justify-content: space-between;
+}
+.a{
+    background-color: black;
+}
+.b{
+    background-color: blue;
+}
+.a, .b {
+    padding: 100px;
+}

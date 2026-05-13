@@ -1,0 +1,15 @@
+div {
+    display: inline-block;
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+}
+
+.cont{
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+}   
+.cont div {
+    margin-left: 40px;
+}

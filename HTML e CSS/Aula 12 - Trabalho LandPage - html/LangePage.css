@@ -1,0 +1,27 @@
+img{
+    width: 100px;
+    border-radius: 15px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: pink;
+    height: 120px;
+    border-radius: 10px;
+}
+.menu a{
+    background-color: black;
+    color: blueviolet;
+    padding: 15PX;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 10px;
+    box-shadow: 2px 2px 5px blue;
+}
+.menu a:hover {
+    background-color: blueviolet;
+    color: black;
+}

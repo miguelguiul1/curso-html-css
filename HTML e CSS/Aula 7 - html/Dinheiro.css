@@ -1,0 +1,35 @@
+.cont{
+    display: flex;              /* coloca os elementos lado a lado */
+    justify-content: center;    /* centraliza na horizontal */
+    align-items: center;        /* centraliza na vertical */
+    gap: 100px;                 /* espaço entre os elementos */
+    bottom: 50px;               /* sobe 50px a partir de baixo (precisa de position) */
+}
+
+.texto {
+    font-size: 18px;            /* tamanho do texto */
+    background-color: aqua;     /* cor de fundo */
+    border: 3px solid;          /* borda da caixa */
+    border-radius: 15px;        /* borda arredondada */
+    width: 450px;               /* largura da caixa */
+}
+
+.img2 {
+    display: flex;              /* ativa flex */
+    justify-content: center;    /* centraliza a imagem */
+}
+
+.part3{
+    display: flex;              /* coloca os textos lado a lado */
+    justify-content: center;    /* centraliza no meio */
+    gap: 200px;                 /* espaço entre os textos */
+}
+
+.p1, .p2{
+    font-size: 18px;            /* tamanho do texto */
+    width: 20%;                 /* largura da caixa */
+    background-color: lightgreen; /* cor de fundo */
+    border: 3px solid;          /* borda */
+    border-radius: 15px;        /* borda arredondada */
+    padding: 10px;              /* espaço dentro da caixa */
+}

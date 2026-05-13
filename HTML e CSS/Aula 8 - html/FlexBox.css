@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo2, .titulo3 {
+    text-align: center;
+}
+.blocos1{
+    display: flex; /* coloca os dois blocos lado a lado */
+    justify-content: space-between; /*separa eles */
+    gap: 50px;         /* espaço entre os blocos */
+}
+
+.b1, .b2 {
+    width: 40%;
+}

@@ -1,0 +1,10 @@
+.flex{
+    background-color: rgb(253, 0, 0);
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: end;
+}
