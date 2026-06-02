@@ -1,0 +1,56 @@
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: rgba(255, 255, 255, 0.96);
+    color: #7a3f63;
+    border-bottom: 1px solid #f0e3ea;
+    box-shadow: 0 6px 20px rgba(89, 53, 74, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+.menu h1 {
+    color: #7a3f63;
+    font-size: 22px;
+}
+
+.menu-escondido {
+    transform: translateY(-78%);
+}
+
+.menu-escondido:hover {
+    transform: translateY(0);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 15%;
+}
+
+.links-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.links-menu a {
+    color: #7a3f63;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links-menu a:hover {
+    color: #c06b8c;
+}

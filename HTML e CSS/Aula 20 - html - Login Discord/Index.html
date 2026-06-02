@@ -1,57 +1,35 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Discord</title>
+  <link rel="stylesheet" href="caixa.css">
+</head>
+<body>
 
-    <title>Login Discord</title>
-
-    <link rel="stylesheet" href="caixa.css" />
-  </head>
-
-  <body>
-    <section class="caixa">
+  <section class="caixa">
+    <div>
       <h1>Criar uma conta</h1>
+    </div>
+    <form action="">
+      <div class="e-mail">
+        <label for="">E-mail</label>
+      <input type="email">
+      </div>
+      <div class="NomeExibido">
+        <label for="">Nome exibido</label>
+      </div>
+      <div class="NomeUsuario">
 
-      <form action="">
-        <div class="email">
-          <label for="email">E-mail</label>
+      </div>
+      <div class="Senha">
 
-          <input type="email" id="email" placeholder="Digite seu e-mail" />
-        </div>
+      </div>
+      <div class="DataNascimento">
 
-        <div class="NomeExibido">
-          <label for="nome">Nome exibido</label>
-
-          <input type="text" id="nome" placeholder="Seu nome" />
-        </div>
-
-        <div class="NomeUsuario">
-          <label for="usuario">Nome de usuário</label>
-
-          <input type="text" id="usuario" placeholder="Nome de usuário" />
-        </div>
-
-        <div class="Senha">
-          <label for="senha">Senha</label>
-
-          <input type="password" id="senha" placeholder="Digite sua senha" />
-        </div>
-
-        <div class="DataNascimento">
-          <label for="dia"> Data de nascimento </label>
-
-          <div class="data">
-            <input type="text" id="dia" placeholder="Dia" />
-
-            <input type="text" id="mes" placeholder="Mês" />
-
-            <input type="text" id="ano" placeholder="Ano" />
-          </div>
-        </div>
-
-        <button type="submit">Continuar</button>
-      </form>
-    </section>
-  </body>
+      </div>
+    </form>
+  </section>
+</body>
 </html>

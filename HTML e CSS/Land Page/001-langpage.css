@@ -1,0 +1,14 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffdfd;
+    color: #4b434a;
+}

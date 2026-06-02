@@ -1,0 +1,23 @@
+/* RODAPE */
+footer.rodape {
+    background-color: #7a3f63;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    box-shadow: 0 -8px 24px rgba(89, 53, 74, 0.12);
+    display: block;
+    width: 100%;
+}
+
+footer.rodape p {
+    margin-bottom: 8px;
+}
+
+footer.rodape a {
+    color: #f8d9e6;
+    text-decoration: none;
+}
+
+footer.rodape a:hover {
+    color: #ffffff;
+}
