@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 export default function Digitar() {
   const [texto, setTexto] = useState("");
 
-  function AtualizarTexto(event) {
-    setTexto(event.target.value);
+  function AtualizarTexto(e) {
+    setTexto(e.target.value);
   }
 
   return (
     <div className="digitar">
-      <h1>Digitar</h1>
+      <h1>Digite aqui ↓</h1>
       <input type="text" value={texto} onChange={AtualizarTexto} />
       <h2>Texto: {texto}</h2>
       <div>
