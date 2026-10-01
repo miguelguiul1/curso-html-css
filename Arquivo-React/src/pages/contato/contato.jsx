@@ -7,7 +7,7 @@ export default function Contato() {
       <h1>Contato</h1>
       <Link to="/">Voltar para Home</Link>
       <Link to="/contador">Ir para Contador</Link>
-      <Link to="/digitar">Ir para Digitar</Link>
+      <Link to="/mudar">Ir para Mudar</Link>
     </div>
   );
 }

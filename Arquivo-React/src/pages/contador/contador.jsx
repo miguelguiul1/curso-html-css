@@ -19,7 +19,7 @@ export default function Contador() {
       <button onClick={Aumentar}>+</button>
       <div>
         <Link to="/">Voltar para Home</Link>
-        <Link to="/digitar">Ir para Digitar</Link>
+        <Link to="/mudar">Ir para Mudar</Link>
         <Link to="/contato">Ir para Contato</Link>
       </div>
     </div>

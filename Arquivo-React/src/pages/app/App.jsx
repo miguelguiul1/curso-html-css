@@ -6,6 +6,7 @@ function App() {
       <h1>Arquivo React</h1>
       <Link to="/contador">Ir para Contador</Link>
       <Link to="/contato">Ir para Contato</Link>
+      <Link to="/mudar">Ir para Mudar</Link>
     </div>
   );
 }
