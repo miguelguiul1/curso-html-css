@@ -1,7 +1,77 @@
-.App {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 15px;
-}
+// App.scss
 
+$card: #ffffff;
+$texto: #1f2937;
+$suave: #6b7280;
+$borda: #e7e0d3;
+$teal: #0d9488;
+$coral: #f4694c;
+$amarelo: #f5a524;
+$azul: #4f6bed;
+
+.App {
+  max-width: 440px;
+  margin: 60px auto;
+  padding: 36px 28px 28px;
+  background: $card;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    color: $texto;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 5px;
+      margin-top: 10px;
+      border-radius: 99px;
+      background: $coral;
+    }
+  }
+
+  a {
+    --cor: #{$teal};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    background: #fbf9f5;
+    border: 1px solid $borda;
+    border-left: 6px solid var(--cor);
+    border-radius: 14px;
+    color: $texto;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+
+    &::after {
+      content: '→';
+      color: var(--cor);
+      font-size: 1.2rem;
+      transition: transform 0.15s;
+    }
+
+    &:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(60, 40, 20, 0.1);
+
+      &::after {
+        transform: translateX(4px);
+      }
+    }
+
+    &:nth-of-type(1) { --cor: #{$teal}; }
+    &:nth-of-type(2) { --cor: #{$coral}; }
+    &:nth-of-type(3) { --cor: #{$amarelo}; }
+    &:nth-of-type(4) { --cor: #{$azul}; }
+  }
+}

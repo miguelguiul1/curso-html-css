@@ -9,6 +9,7 @@ export default function Mudar() {
   const [textoEscrito, setTextoEscrito] = useState("");
   const [texto, setTexto] = useState("");
 
+  const [corEscolhida, setCorEscolhida] = useState("#ffffff");
   const [cor, setCor] = useState("");
 
   function Digitar(e) { 
@@ -22,12 +23,15 @@ export default function Mudar() {
     setTexto(textoEscrito);
   }
 
-  function MudarCor(e){
-    setCor(e.target.value);
+  function PegarCor(e) {
+    setCorEscolhida(e.target.value);
+  }
+  function MudarCor() {
+    setCor(corEscolhida);
   }
 
   return (
-    <div className="digitar">
+    <div className="digitar" style={{ backgroundColor: cor }}>
 
       <h1>Digite aqui ↓</h1>
       <input type="text" onChange={Digitar} />
@@ -39,12 +43,14 @@ export default function Mudar() {
       <button onClick={MudarTexto}>Mudar Texto</button>
       <div>
 
-      <h1>Escolha cor de fundo: </h1> <style>background-color: {cor} </style>
+      <h1>Escolha cor de fundo: </h1>
+      <input type="color" value={corEscolhida} onChange={PegarCor} />
       <button onClick={MudarCor}>Mudar Cor</button>
 
         <Link to="/">Voltar para Home</Link>
         <Link to="/contador">Ir para Contador</Link>
         <Link to="/contato">Ir para Contato</Link>
+        <Link to="/calculadora">Ir para Calculadora</Link>
       </div>
     </div>
   );

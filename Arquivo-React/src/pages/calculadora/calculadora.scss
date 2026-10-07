@@ -1,0 +1,123 @@
+// calculadora.scss
+
+$card: #ffffff;
+$texto: #1f2937;
+$suave: #6b7280;
+$borda: #e7e0d3;
+$teal: #0d9488;
+$coral: #f4694c;
+$amarelo: #f5a524;
+$azul: #4f6bed;
+
+.calculadora {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 36px 28px 28px;
+  background: $card;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.1);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  h1 {
+    grid-column: 1 / -1;
+    margin-bottom: 8px;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    color: $texto;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 5px;
+      margin-top: 10px;
+      border-radius: 99px;
+      background: $teal;
+    }
+  }
+
+  input {
+    min-width: 0;
+    padding: 16px;
+    background: #fbf9f5;
+    border: 2px solid $borda;
+    border-radius: 14px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: $texto;
+    transition: border-color 0.2s, background 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $teal;
+      background: #fff;
+    }
+  }
+
+  button {
+    --cor: #{$teal};
+    padding: 16px;
+    background: var(--cor);
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s, box-shadow 0.1s, filter 0.2s;
+
+    &:hover {
+      filter: brightness(1.08);
+    }
+
+    &:active {
+      transform: translateY(3px);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:nth-of-type(1) { --cor: #{$teal}; }
+    &:nth-of-type(2) { --cor: #{$coral}; }
+    &:nth-of-type(3) { --cor: #{$amarelo}; color: $texto; }
+    &:nth-of-type(4) { --cor: #{$azul}; }
+  }
+
+  p {
+    grid-column: 1 / -1;
+    margin: 8px 0;
+    padding: 20px;
+    background: #e6f6f3;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: $teal;
+    word-break: break-all;
+  }
+
+  a {
+    padding: 10px;
+    background: #f3eee5;
+    border-radius: 99px;
+    color: $suave;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+      background: $texto;
+      color: #fff;
+    }
+
+    // separa os links do resto
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,1 +1,48 @@
+// index.scss
 
+$fundo: #f7f3ec;
+$texto: #1f2937;
+$teal: #0d9488;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 0%, #ffe3d6 0, transparent 40%),
+    radial-gradient(circle at 100% 20%, #d4f1ec 0, transparent 40%),
+    $fundo;
+  background-attachment: fixed;
+  color: $texto;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: $teal;
+  color: #fff;
+}

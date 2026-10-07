@@ -21,6 +21,7 @@ export default function Contador() {
         <Link to="/">Voltar para Home</Link>
         <Link to="/mudar">Ir para Mudar</Link>
         <Link to="/contato">Ir para Contato</Link>
+        <Link to="/calculadora">Ir para Calculadora</Link>
       </div>
     </div>
   );
