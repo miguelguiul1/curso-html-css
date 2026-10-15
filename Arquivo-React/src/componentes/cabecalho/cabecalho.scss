@@ -1,0 +1,90 @@
+// cabecalho.scss
+// Paleta inspirada no Nubank
+
+$roxo: #820ad1;
+$roxo-escuro: #5a0a94;
+$roxo-claro: #f4e8fc;
+$suave: #6e6480;
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .foto-perfil {
+    flex-shrink: 0;
+    margin-right: 0;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 3px $roxo, 0 8px 20px rgba(130, 10, 209, 0.25);
+  }
+
+  .texto {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: $roxo-escuro;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 5px;
+      margin-top: 10px;
+      border-radius: 99px;
+      background: $roxo;
+    }
+  }
+
+  // o h3 aceita texto ou vários <Link>
+  h3 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 14px 0 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: $suave;
+
+    a {
+      white-space: nowrap;
+      padding: 8px 16px;
+      background: $roxo-claro;
+      border-radius: 99px;
+      color: $roxo-escuro;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+
+      &:hover {
+        background: $roxo;
+        color: #fff;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// celular: foto em cima, links podem quebrar linha
+@media (max-width: 520px) {
+  .cabecalho {
+    flex-direction: column;
+    text-align: center;
+
+    h1::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

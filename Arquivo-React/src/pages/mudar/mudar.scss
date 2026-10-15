@@ -1,137 +1,139 @@
 // mudar.scss
+// A classe do JSX é "digitar". O fundo muda pelo style inline (corEscolhida).
+// Paleta inspirada no Nubank (mesma das outras páginas)
 
 $card: #ffffff;
-$texto: #1f2937;
-$suave: #6b7280;
-$borda: #e7e0d3;
-$teal: #0d9488;
-$coral: #f4694c;
-$azul: #4f6bed;
+$texto: #1c1130;
+$roxo: #820ad1;
+$roxo-escuro: #5a0a94;
+$borda: #e6d9f2;
 
 .digitar {
-  max-width: 440px;
+  max-width: 980px;
   margin: 60px auto;
-  padding: 36px 28px 28px;
-  background: $card;
+  padding: 32px 28px;
+  background: $card; // vale só enquanto não escolher cor (o inline sobrescreve)
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.1);
-  transition: background 0.3s;
+  box-shadow: 0 20px 50px rgba(60, 20, 90, 0.12);
+  transition: background-color 0.3s ease;
 
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 12px;
 
-  h1 {
-    margin: 14px 0 0;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: $suave;
+  > .cabecalho {
+    align-self: stretch;
+    margin-bottom: 8px;
+  }
 
-    &:first-child {
-      margin-top: 0;
-    }
+  h1 {
+    margin: 12px 0 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.2px;
+    color: $texto;
+  }
+
+  // texto que aparece na tela, translúcido para funcionar sobre qualquer cor
+  h2 {
+    align-self: stretch;
+    margin: 0;
+    padding: 16px 18px;
+    background: rgba(130, 10, 209, 0.1);
+    border-radius: 14px;
+    color: $roxo-escuro;
+    font-size: 1.1rem;
+    font-weight: 700;
+    word-break: break-word;
   }
 
   input[type='text'] {
-    padding: 16px;
-    background: #fbf9f5;
+    width: 100%;
+    max-width: 560px;
+    padding: 14px 16px;
     border: 2px solid $borda;
     border-radius: 14px;
-    font-size: 1.05rem;
+    background: #fbf8fe;
     color: $texto;
-    transition: border-color 0.2s, background 0.2s;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
 
     &:focus {
-      outline: none;
-      border-color: $teal;
-      background: #fff;
+      border-color: $roxo;
+      box-shadow: 0 0 0 4px rgba(130, 10, 209, 0.15);
     }
   }
 
   input[type='color'] {
-    width: 100%;
-    height: 52px;
+    width: 64px;
+    height: 48px;
     padding: 4px;
-    background: #fbf9f5;
     border: 2px solid $borda;
-    border-radius: 14px;
+    border-radius: 12px;
+    background: #fff;
     cursor: pointer;
-  }
-
-  h2 {
-    min-height: 54px;
-    margin: 0;
-    padding: 14px 16px;
-    background: #e6f6f3;
-    border-radius: 14px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: $teal;
-    word-break: break-word;
   }
 
   button {
-    padding: 15px;
-    background: $teal;
+    padding: 12px 28px;
     border: none;
     border-radius: 14px;
+    background: $roxo;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 0 $roxo-escuro;
     transition: transform 0.1s, box-shadow 0.1s, filter 0.2s;
 
     &:hover {
-      filter: brightness(1.08);
+      filter: brightness(1.1);
     }
 
     &:active {
       transform: translateY(3px);
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 0 $roxo-escuro;
     }
   }
 
-  // bloco da cor + links
-  div {
-    margin-top: 12px;
+  // div do final: escolha de cor + links
+  > div {
+    align-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
     padding-top: 20px;
     border-top: 2px dashed $borda;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-
-    h1,
-    button,
-    input[type='color'] {
-      grid-column: 1 / -1;
-    }
 
     h1 {
+      flex-basis: 100%;
       margin: 0;
     }
 
-    button {
-      background: $coral;
-    }
-
     a {
-      padding: 10px;
-      background: #f3eee5;
+      padding: 8px 16px;
+      background: rgba(130, 10, 209, 0.1);
       border-radius: 99px;
-      color: $suave;
+      color: $roxo-escuro;
       font-size: 0.85rem;
       font-weight: 600;
-      text-align: center;
       text-decoration: none;
       transition: background 0.2s, color 0.2s;
 
       &:hover {
-        background: $texto;
+        background: $roxo;
         color: #fff;
       }
     }
+  }
+}
+
+@media (max-width: 520px) {
+  .digitar {
+    margin: 24px 16px;
+    padding: 24px 20px;
   }
 }

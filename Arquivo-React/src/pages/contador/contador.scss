@@ -1,51 +1,49 @@
 // contador.scss
+// Paleta inspirada no Nubank (mesma do cabecalho, App e calculadora)
 
 $card: #ffffff;
-$texto: #1f2937;
-$suave: #6b7280;
-$borda: #e7e0d3;
-$teal: #0d9488;
-$coral: #f4694c;
+$texto: #1c1130;
+$roxo: #820ad1;
+$roxo-escuro: #5a0a94;
+$roxo-claro: #f4e8fc;
 
 .contador {
-  max-width: 420px;
+  max-width: 980px;
   margin: 60px auto;
-  padding: 36px 28px 28px;
+  padding: 32px 28px;
   background: $card;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.1);
+  box-shadow: 0 20px 50px rgba(60, 20, 90, 0.12);
 
   display: grid;
   grid-template-columns: 64px 1fr 64px;
   align-items: center;
   gap: 14px;
 
-  h1 {
+  // cabeçalho (foto + título + links) ocupa a linha toda
+  > .cabecalho {
     grid-column: 1 / -1;
     margin-bottom: 8px;
-    font-size: 2rem;
-    letter-spacing: -0.5px;
-    color: $texto;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 48px;
-      height: 5px;
-      margin-top: 10px;
-      border-radius: 99px;
-      background: $coral;
-    }
   }
 
-  p {
+  // título da própria página
+  > h1 {
+    grid-column: 1 / -1;
+    margin: 8px 0 4px;
+    font-size: 1.5rem;
+    letter-spacing: -0.3px;
+    color: $texto;
+  }
+
+  > p {
+    margin: 0;
     padding: 22px 12px;
-    background: #fff4ef;
+    background: $roxo-claro;
     border-radius: 18px;
+    color: $roxo-escuro;
     font-size: 1.4rem;
     font-weight: 700;
     text-align: center;
-    color: $coral;
   }
 
   > button {
@@ -53,55 +51,33 @@ $coral: #f4694c;
     height: 64px;
     border: none;
     border-radius: 50%;
+    background: $roxo;
     color: #fff;
     font-size: 2rem;
     line-height: 1;
     cursor: pointer;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 0 $roxo-escuro;
     transition: transform 0.1s, box-shadow 0.1s, filter 0.2s;
 
-    &:first-of-type {
-      background: $coral;
-    }
-
-    &:last-of-type {
-      background: $teal;
-    }
-
     &:hover {
-      filter: brightness(1.08);
+      filter: brightness(1.1);
     }
 
     &:active {
       transform: translateY(3px);
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 0 $roxo-escuro;
     }
   }
 
-  div {
-    grid-column: 1 / -1;
-    margin-top: 12px;
-    padding-top: 20px;
-    border-top: 2px dashed $borda;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+  // div vazia que sobrou no JSX não ocupa espaço
+  > div:empty {
+    display: none;
+  }
+}
 
-    a {
-      padding: 10px;
-      background: #f3eee5;
-      border-radius: 99px;
-      color: $suave;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-align: center;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-
-      &:hover {
-        background: $texto;
-        color: #fff;
-      }
-    }
+@media (max-width: 520px) {
+  .contador {
+    margin: 24px 16px;
+    padding: 24px 20px;
   }
 }

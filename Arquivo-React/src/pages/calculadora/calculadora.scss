@@ -1,123 +1,105 @@
 // calculadora.scss
+// Paleta inspirada no Nubank (mesma do cabecalho, App e contador)
 
 $card: #ffffff;
-$texto: #1f2937;
-$suave: #6b7280;
-$borda: #e7e0d3;
-$teal: #0d9488;
-$coral: #f4694c;
-$amarelo: #f5a524;
-$azul: #4f6bed;
+$texto: #1c1130;
+$roxo: #820ad1;
+$roxo-escuro: #5a0a94;
+$roxo-claro: #f4e8fc;
+$borda: #e6d9f2;
 
 .calculadora {
-  max-width: 420px;
+  max-width: 980px;
   margin: 60px auto;
-  padding: 36px 28px 28px;
+  padding: 32px 28px;
   background: $card;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.1);
+  box-shadow: 0 20px 50px rgba(60, 20, 90, 0.12);
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 
-  h1 {
+  // cabeçalho (foto + título + links) ocupa a linha toda
+  > .cabecalho {
     grid-column: 1 / -1;
     margin-bottom: 8px;
-    font-size: 2rem;
-    letter-spacing: -0.5px;
-    color: $texto;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 48px;
-      height: 5px;
-      margin-top: 10px;
-      border-radius: 99px;
-      background: $teal;
-    }
   }
 
-  input {
-    min-width: 0;
-    padding: 16px;
-    background: #fbf9f5;
+  // título da própria página
+  > h1 {
+    grid-column: 1 / -1;
+    margin: 8px 0 4px;
+    font-size: 1.5rem;
+    letter-spacing: -0.3px;
+    color: $texto;
+  }
+
+  // dois campos lado a lado
+  > input {
+    grid-column: span 2;
+    padding: 14px 16px;
     border: 2px solid $borda;
     border-radius: 14px;
-    font-size: 1.2rem;
-    text-align: center;
+    background: #fbf8fe;
     color: $texto;
-    transition: border-color 0.2s, background 0.2s;
+    font-size: 1.1rem;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
 
     &:focus {
-      outline: none;
-      border-color: $teal;
-      background: #fff;
+      border-color: $roxo;
+      box-shadow: 0 0 0 4px rgba(130, 10, 209, 0.15);
     }
   }
 
-  button {
-    --cor: #{$teal};
-    padding: 16px;
-    background: var(--cor);
+  // quatro operações numa linha
+  > button {
+    padding: 14px 0;
     border: none;
     border-radius: 14px;
+    background: $roxo;
     color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 0 $roxo-escuro;
     transition: transform 0.1s, box-shadow 0.1s, filter 0.2s;
 
     &:hover {
-      filter: brightness(1.08);
+      filter: brightness(1.1);
     }
 
     &:active {
       transform: translateY(3px);
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 1px 0 $roxo-escuro;
     }
-
-    &:nth-of-type(1) { --cor: #{$teal}; }
-    &:nth-of-type(2) { --cor: #{$coral}; }
-    &:nth-of-type(3) { --cor: #{$amarelo}; color: $texto; }
-    &:nth-of-type(4) { --cor: #{$azul}; }
   }
 
-  p {
+  // resultado
+  > p {
     grid-column: 1 / -1;
-    margin: 8px 0;
-    padding: 20px;
-    background: #e6f6f3;
-    border-radius: 16px;
+    margin: 4px 0 0;
+    padding: 22px 16px;
+    background: $roxo-claro;
+    border-radius: 18px;
+    color: $roxo-escuro;
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    color: $teal;
-    word-break: break-all;
   }
+}
 
-  a {
-    padding: 10px;
-    background: #f3eee5;
-    border-radius: 99px;
-    color: $suave;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
+// celular: campos e botões em 2 colunas
+@media (max-width: 520px) {
+  .calculadora {
+    margin: 24px 16px;
+    padding: 24px 20px;
 
-    &:hover {
-      background: $texto;
-      color: #fff;
-    }
-
-    // separa os links do resto
-    &:nth-of-type(1),
-    &:nth-of-type(2) {
-      margin-top: 8px;
+    > input,
+    > button {
+      grid-column: span 2;
     }
   }
 }

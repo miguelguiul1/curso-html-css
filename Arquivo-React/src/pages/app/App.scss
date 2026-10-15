@@ -1,77 +1,80 @@
 // App.scss
+// Paleta inspirada no Nubank (mesma do cabecalho.scss)
 
 $card: #ffffff;
-$texto: #1f2937;
-$suave: #6b7280;
-$borda: #e7e0d3;
-$teal: #0d9488;
-$coral: #f4694c;
-$amarelo: #f5a524;
-$azul: #4f6bed;
+$texto: #1c1130;
+$suave: #6e6480;
+$roxo: #820ad1;
+$roxo-escuro: #5a0a94;
+$roxo-claro: #f4e8fc;
 
 .App {
-  max-width: 440px;
+  max-width: 980px;
   margin: 60px auto;
-  padding: 36px 28px 28px;
+  padding: 32px 28px;
   background: $card;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(60, 40, 20, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  box-shadow: 0 20px 50px rgba(60, 20, 90, 0.12);
 
-  h1 {
-    margin-bottom: 12px;
-    font-size: 2rem;
-    letter-spacing: -0.5px;
-    color: $texto;
-
-    &::after {
-      content: '';
-      display: block;
-      width: 48px;
-      height: 5px;
-      margin-top: 10px;
-      border-radius: 99px;
-      background: $coral;
-    }
-  }
-
-  a {
-    --cor: #{$teal};
+  // header de fora: foto + cabeçalho lado a lado
+  > header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 16px 18px;
-    background: #fbf9f5;
-    border: 1px solid $borda;
-    border-left: 6px solid var(--cor);
-    border-radius: 14px;
-    color: $texto;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    gap: 20px;
 
-    &::after {
-      content: '→';
-      color: var(--cor);
-      font-size: 1.2rem;
-      transition: transform 0.15s;
+    .foto-perfil {
+      flex-shrink: 0;
+      margin-right: 0;
+      border: 4px solid #fff;
+      box-shadow: 0 0 0 3px $roxo, 0 8px 20px rgba(130, 10, 209, 0.25);
     }
 
-    &:hover {
-      background: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(60, 40, 20, 0.1);
+    .cabecalho {
+      flex: 1;
 
-      &::after {
-        transform: translateX(4px);
+      // o h3 do Cabecalho vira a faixa de links
+      h3 {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 14px;
+
+        a {
+          white-space: nowrap;
+          padding: 8px 16px;
+          background: $roxo-claro;
+          border-radius: 99px;
+          color: $roxo-escuro;
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background 0.2s, color 0.2s, transform 0.15s;
+
+          &:hover {
+            background: $roxo;
+            color: #fff;
+            transform: translateY(-2px);
+          }
+        }
       }
     }
+  }
+}
 
-    &:nth-of-type(1) { --cor: #{$teal}; }
-    &:nth-of-type(2) { --cor: #{$coral}; }
-    &:nth-of-type(3) { --cor: #{$amarelo}; }
-    &:nth-of-type(4) { --cor: #{$azul}; }
+// celular: foto em cima, título embaixo
+@media (max-width: 520px) {
+  .App {
+    margin: 24px 16px;
+    padding: 24px 20px;
+
+    > header {
+      flex-direction: column;
+      text-align: center;
+
+      .cabecalho h3 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
   }
 }

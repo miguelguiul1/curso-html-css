@@ -1,6 +1,7 @@
 import "./mudar.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Cabecalho from '../../componentes/cabecalho/cabecalho'
 
 export default function Mudar() {
 
@@ -33,6 +34,12 @@ export default function Mudar() {
   return (
     <div className="digitar" style={{ backgroundColor: cor }}>
 
+      <Cabecalho titulo="Mudar Texto e Cor"
+      link={<> <Link to="/contador">Ir para Contador</Link>
+      <Link to="/contato">Ir para Contato</Link>
+      <Link to="/mudar">Ir para Mudar</Link>
+      <Link to="/calculadora">Ir para Calculadora</Link> </> } />
+
       <h1>Digite aqui ↓</h1>
       <input type="text" onChange={Digitar} />
       <h2>Texto: {textoDigitado}</h2>
@@ -46,11 +53,6 @@ export default function Mudar() {
       <h1>Escolha cor de fundo: </h1>
       <input type="color" value={corEscolhida} onChange={PegarCor} />
       <button onClick={MudarCor}>Mudar Cor</button>
-
-        <Link to="/">Voltar para Home</Link>
-        <Link to="/contador">Ir para Contador</Link>
-        <Link to="/contato">Ir para Contato</Link>
-        <Link to="/calculadora">Ir para Calculadora</Link>
       </div>
     </div>
   );
