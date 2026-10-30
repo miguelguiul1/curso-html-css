@@ -5,6 +5,7 @@ import Contador from "./pages/contador/contador";
 import Contato from "./pages/contato/contato";
 import Mudar from "./pages/mudar/mudar";
 import Calculadora from "./pages/calculadora/calculadora";
+import Ingresso from "./pages/ingresso/ingresso";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route path="/contato" element={<Contato />} />
         <Route path="/mudar" element={<Mudar />} />
         <Route path="/calculadora" element={<Calculadora />} />
+        <Route path="/ingresso" element={<Ingresso />} />
       </Routes>
     </BrowserRouter>
   );

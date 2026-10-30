@@ -1,0 +1,95 @@
+$roxo: #820ad1;
+$roxo-escuro: #5a0a94;
+$roxo-claro: #f4e8fc;
+$suave: #6e6480;
+$fundo: #faf6fd;
+$borda: #e2d0f3;
+
+.ingresso {
+  min-height: 100vh;
+  background: $fundo;
+  color: $roxo-escuro;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  // o cabeçalho ocupa a largura toda, alinhado à esquerda
+  .cabecalho {
+    align-self: stretch;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 12px;
+  }
+
+  > h1 {
+    margin: 8px 0 0;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+
+  > p {
+    margin: 0;
+    font-size: 1rem;
+    color: $suave;
+  }
+
+  > input[type='number'],
+  > input[type='text'] {
+    width: 260px;
+    padding: 12px 14px;
+    border: 2px solid $borda;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 1rem;
+    color: $roxo-escuro;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $roxo;
+      box-shadow: 0 0 0 4px rgba(130, 10, 209, 0.15);
+    }
+  }
+
+  > input[type='checkbox'] {
+    width: 22px;
+    height: 22px;
+    accent-color: $roxo;
+    cursor: pointer;
+  }
+
+  > button {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 99px;
+    background: $roxo;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+
+    &:hover {
+      background: $roxo-escuro;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+  // o último parágrafo é o Total
+  > p:last-of-type {
+    margin-top: 10px;
+    padding: 14px 28px;
+    background: $roxo-claro;
+    border-radius: 14px;
+    color: $roxo-escuro;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}
